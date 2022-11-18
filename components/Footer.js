@@ -35,10 +35,6 @@ export default function Footer() {
                     ))}
                 </nav>
                 <div className="mt-8 flex justify-center space-x-6">
-                    <a key="linkedin" href="https://linkedin.com/in/raines-demint" className="text-gray-400 hover:text-gray-500">
-                        <span className="sr-only">{"LinkedIn"}</span>
-                        <img src="/ln-White-26_2x.png" className="saturate-0 opacity-60 hover:opacity-80 h-5 w-5" alt="LinkedIn Logo"/>
-                    </a>
                     {navigation.social.map((item) => (
                         <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
                             <span className="sr-only">{item.name}</span>
@@ -46,6 +42,7 @@ export default function Footer() {
                         </a>
                     ))}
                 </div>
+                <p className='mt-8 text-gray-400 text-center'>This is not an official Organic Climbing site.</p>
                 <p className="mt-8 text-center text-base text-gray-400">&copy; 2022 Raines Demint. All rights reserved.</p>
             </div>
         </footer>

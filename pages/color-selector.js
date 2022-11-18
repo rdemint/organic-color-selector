@@ -61,6 +61,7 @@ export default function ColorSelector(...props) {
         {name: 'Mint Green', value: '#91D399'},
         {name: 'Navy Blue', value: '#1C2738'},
         {name: 'Neon Blue', value: '#20ABC7'},
+        {name: 'Neon Green', value: '#53DC42'},
         {name: 'Neon Pink', value: '#FF438F'},
         {name: 'Neon Yellow', value: '#D1FF45'},
         {name: 'Olive Green', value: '#606456'},
@@ -91,7 +92,7 @@ const accent3 = colors.find((el) => (el.name === "Neon Green"))
             <div className="flex-col justify-center items-center">
                 <div className="organic-visualizer">
                     <div className="relative">
-                                <svg width={pWidth} height={pHeight} viewBox="0 0 400 300">
+                                <svg width='400px' height='300px' viewBox="0 0 400 300">
                                     <rect width="100%" height="100%" style={{fill: currentPrimaryColor}}></rect>
                                     <polygon points="0,20 0,60 350,300 385,300" fill={currentAccentColor1} />
                                     <polygon points="0,60 0,120 200,300 350,300" fill={currentAccentColor2} />

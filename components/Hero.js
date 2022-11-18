@@ -12,7 +12,7 @@ export default function Hero() {
                 className="py-4 text-slate-700 font-lg text-5xl">Envision the
                 <span
                     
-                    className="bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-500 text-transparent"> color</span></h2>
+                    className="bg-gradient-to-r from-yellow-400 to-rose-500 text-transparent"> color</span></h2>
                 <p className="py-4 text-slate-600 font-md text-base">Organic crash pad climbing.</p>
         </div>
         <div className="bg-gradient-to-r from-pink-500 to-slate-500 md:w-2/3">
