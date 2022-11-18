@@ -2,25 +2,22 @@ import ReactTypingEffect from 'react-typing-effect'
 
 export default function Hero() {
     return (
-        <div className="text-center mt-12 mb-6">
-            <ReactTypingEffect
-                text={["Express yourself with color."]}
-                eraseSpeed={50}
-                eraseDelay={5000}
-                typingDelay={100}
-                speed={75}
-                cursorClassName={"text-4xl sm:text-5xl md:text-6xl text-slate-300"}
-
-                displayTextRenderer={
-                    (text, i) => {
-                        return <h2 className="text-4xl sm:text-5xl md:text-6xl text-slate-700">{text}</h2>
-                    }
-                }
-            />
-            <p className="mx-auto my-3 max-w-md text-base text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
-                Pick your colors for your next Organic Climbing bouldering pad. 
-            </p>
-           
+        <div className="shadow-inner bg-slate-50 items-center w-full md:flex">
+        <div
+            className="px-4 mx-8"
+        >
+                
+                <h2
+                    
+                className="py-4 text-slate-700 font-lg text-5xl">Envision the
+                <span
+                    
+                    className="bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-500 text-transparent"> color</span></h2>
+                <p className="py-4 text-slate-600 font-md text-base">Organic crash pad climbing.</p>
         </div>
+        <div className="bg-gradient-to-r from-pink-500 to-slate-500 md:w-2/3">
+            <img src="southwest_face_top.jpg"/>
+        </div>
+    </div>
 )
 }

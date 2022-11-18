@@ -44,7 +44,9 @@ function ColorPicker({label, currentColor, selectColorFunction, colors}) {
 
 export default function ColorSelector(...props) {
 
-
+    const ratio = 1.26
+    const pHeight = 322
+    const pWidth = 406
     const colors = [
         {name: 'Baby Blue', value: '#4877A4'},
         {name: 'Black', value:'#000000'},
@@ -86,8 +88,24 @@ export default function ColorSelector(...props) {
    const [currentAccentColor3, selectAccentColor3] = useState(colors[3].value)
     
    return (
-            <div className="flex justify-center items-center">
-                <div className="relative">
+            <div className="flex-col justify-center items-center">
+                <div className="border bg-zinc-100 organic-visualizer">
+                    <div className="relative">
+                                <svg width={pWidth} height={pHeight} className="absolute">
+                                    <rect width={pWidth} height={pHeight} style={{fill: currentPrimaryColor}}></rect>
+                                </svg>
+                            <svg className="absolute">
+                                <rect width="160" height="175" style={{fill: currentAccentColor1}}></rect>
+                            </svg>
+                                <svg className="absolute top-0 left-0">
+                                    <rect width="120" height="120" style={{fill: currentAccentColor2}}></rect>
+                                </svg>
+                                <svg className="absolute top-0 left-0">
+                                    <rect width="48" height="48" style={{fill: currentAccentColor3}}></rect>
+                                </svg>
+                    </div>
+                </div>
+                {/* <div className="relative mt-12">
                     <div style={{backgroundColor: currentPrimaryColor}} className="static rounded w-96 h-96">
                         <div style={{backgroundColor: currentAccentColor1}} className="static rounded w-48 h-48">
                             <div style={{backgroundColor: currentAccentColor2}} className="static rounded w-24 h-24">
@@ -95,7 +113,7 @@ export default function ColorSelector(...props) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div>
                     <ColorPicker label="Primary" currentColor={currentPrimaryColor} selectColorFunction={selectPrimaryColor} colors={colors}/>
                     <ColorPicker label="Accent1" currentColor={currentAccentColor1} selectColorFunction={selectAccentColor1} colors={colors}/>
