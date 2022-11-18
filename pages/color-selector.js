@@ -7,10 +7,11 @@ import { useState } from "react"
 function ColorPicker({label, currentColor, selectColorFunction, colors}) {
 
     return (
-        <div className="my-5 px-8">
+        <div className="flex justify-center">
+<div className="mb-5">
         <div className="text-gray-500 px-2">{label}</div>
-            <Listbox value={currentColor} onChange={selectColorFunction} className="px-8">
-                <Listbox.Button className="flex items-center bg-zinc-100 rounded pl-3">
+            <Listbox value={currentColor} onChange={selectColorFunction}>
+                <Listbox.Button className="flex items-center bg-zinc-100 rounded pl-3 w-64">
                     <span style={{ backgroundColor: currentColor}} className="w-4 h-4 mr-5"></span>
                     <span>{currentColor.name}</span>
                     <div className="grow flex justify-end">
@@ -38,6 +39,7 @@ function ColorPicker({label, currentColor, selectColorFunction, colors}) {
                             </Listbox.Options>
                 </Transition>
             </Listbox>
+        </div>
         </div>
     )
 }
@@ -90,7 +92,7 @@ const accent3 = colors.find((el) => (el.name === "Neon Green"))
     
    return (
             <div className="flex-col justify-center items-center">
-                <div className="organic-visualizer">
+                <div className="organic-visualizer pl-12">
                     <div className="relative">
                                 <svg width='320px' height='240px' viewBox="0 0 320 240">
                                     <rect width="100%" height="100%" style={{fill: currentPrimaryColor}}></rect>

@@ -16,7 +16,7 @@ return(
                 <a className="px-3 py-1 text-gray-900 hover:text-primary-900 hover:underline underline-offset-8 decoration-accent-900">About</a>
             </Link>
             <Link href="https://organicclimbing.com/">
-                <a className='px-3 py-1 text-gray-900 hover:text-primary-900 hover:underline underline-offset-8 decoration-accent-900'>Go Shop</a>
+                <a className='px-3 py-1 text-gray-900 hover:text-primary-900 hover:underline underline-offset-8 decoration-accent-900'>Shop</a>
             </Link>
         </section>
         </div>
