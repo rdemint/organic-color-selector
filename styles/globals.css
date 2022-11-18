@@ -19,12 +19,6 @@ a {
   box-sizing: border-box;
 }
 
-.cover-image {
-  background-image: url('../public/southwest_face_top.jpg');
-  background-repeat: no-repeat;
-  background-size: 200px 200px;
-}
-
 .organic-visualizer {
   width: 400px;
   height: 300px;

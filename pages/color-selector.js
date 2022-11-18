@@ -43,10 +43,6 @@ function ColorPicker({label, currentColor, selectColorFunction, colors}) {
 }
 
 export default function ColorSelector(...props) {
-
-    const ratio = 1.26
-    const pHeight = 300
-    const pWidth = 400
     const colors = [
         {name: 'Baby Blue', value: '#4877A4'},
         {name: 'Black', value:'#000000'},
@@ -81,11 +77,15 @@ export default function ColorSelector(...props) {
         {name: 'White', value: '#FFFAFA'},
         {name: 'Yellow', value: '#DAD536'}
     ]
+const primary = colors.find((el)=> (el.name === "Neon Blue"))
+const accent1 = colors.find((el) => (el.name === "Neon Green"))
+const accent2 = colors.find((el) => (el.name === "Neon Yellow"))
+const accent3 = colors.find((el) => (el.name === "Neon Green"))
 
-   const [currentPrimaryColor, selectPrimaryColor] = useState(colors[0].value)
-   const [currentAccentColor1, selectAccentColor1] = useState(colors[1].value)
-   const [currentAccentColor2, selectAccentColor2] = useState(colors[2].value)
-   const [currentAccentColor3, selectAccentColor3] = useState(colors[3].value)
+   const [currentPrimaryColor, selectPrimaryColor] = useState(primary.value)
+   const [currentAccentColor1, selectAccentColor1] = useState(accent1.value)
+   const [currentAccentColor2, selectAccentColor2] = useState(accent2.value)
+   const [currentAccentColor3, selectAccentColor3] = useState(accent3.value)
     
    return (
             <div className="flex-col justify-center items-center">
@@ -95,19 +95,11 @@ export default function ColorSelector(...props) {
                                     <rect width="100%" height="100%" style={{fill: currentPrimaryColor}}></rect>
                                     <polygon points="0,20 0,60 350,300 385,300" fill={currentAccentColor1} />
                                     <polygon points="0,60 0,120 200,300 350,300" fill={currentAccentColor2} />
+                                    
                                     <polygon points="0,120 0,140 150,300 250,300" fill={currentAccentColor3} />
                                 </svg>
                     </div>
                 </div>
-                {/* <div className="relative mt-12">
-                    <div style={{backgroundColor: currentPrimaryColor}} className="static rounded w-96 h-96">
-                        <div style={{backgroundColor: currentAccentColor1}} className="static rounded w-48 h-48">
-                            <div style={{backgroundColor: currentAccentColor2}} className="static rounded w-24 h-24">
-                                <div style={{backgroundColor: currentAccentColor3}} className="static rounded w-12 h-24"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
                 <div>
                     <ColorPicker label="Primary" currentColor={currentPrimaryColor} selectColorFunction={selectPrimaryColor} colors={colors}/>
                     <ColorPicker label="Accent1" currentColor={currentAccentColor1} selectColorFunction={selectAccentColor1} colors={colors}/>
