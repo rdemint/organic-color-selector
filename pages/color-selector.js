@@ -7,10 +7,10 @@ import { useState } from "react"
 function ColorPicker({label, currentColor, selectColorFunction, colors}) {
 
     return (
-        <div className="my-5">
-        <div className="text-gray-500 px-2 w-18">{label}</div>
-            <Listbox value={currentColor} onChange={selectColorFunction}>
-                <Listbox.Button className="flex items-center bg-zinc-100 rounded w-96 pl-3">
+        <div className="my-5 px-8">
+        <div className="text-gray-500 px-2">{label}</div>
+            <Listbox value={currentColor} onChange={selectColorFunction} className="px-8">
+                <Listbox.Button className="flex items-center bg-zinc-100 rounded pl-3">
                     <span style={{ backgroundColor: currentColor}} className="w-4 h-4 mr-5"></span>
                     <span>{currentColor.name}</span>
                     <div className="grow flex justify-end">
@@ -92,12 +92,12 @@ const accent3 = colors.find((el) => (el.name === "Neon Green"))
             <div className="flex-col justify-center items-center">
                 <div className="organic-visualizer">
                     <div className="relative">
-                                <svg width='400px' height='300px' viewBox="0 0 400 300">
+                                <svg width='320px' height='240px' viewBox="0 0 320 240">
                                     <rect width="100%" height="100%" style={{fill: currentPrimaryColor}}></rect>
-                                    <polygon points="0,20 0,60 350,300 385,300" fill={currentAccentColor1} />
-                                    <polygon points="0,60 0,120 200,300 350,300" fill={currentAccentColor2} />
+                                    <polygon points="0,16 0,48 280,240 308,240" fill={currentAccentColor1} />
+                                    <polygon points="0,48 0,96 160,240 280,240" fill={currentAccentColor2} />
                                     
-                                    <polygon points="0,120 0,140 150,300 250,300" fill={currentAccentColor3} />
+                                    <polygon points="0,96 0,112 120,240 200,240" fill={currentAccentColor3} />
                                 </svg>
                     </div>
                 </div>
