@@ -45,8 +45,8 @@ function ColorPicker({label, currentColor, selectColorFunction, colors}) {
 export default function ColorSelector(...props) {
 
     const ratio = 1.26
-    const pHeight = 322
-    const pWidth = 406
+    const pHeight = 300
+    const pWidth = 400
     const colors = [
         {name: 'Baby Blue', value: '#4877A4'},
         {name: 'Black', value:'#000000'},
@@ -89,19 +89,13 @@ export default function ColorSelector(...props) {
     
    return (
             <div className="flex-col justify-center items-center">
-                <div className="border bg-zinc-100 organic-visualizer">
+                <div className="organic-visualizer">
                     <div className="relative">
-                                <svg width={pWidth} height={pHeight} className="absolute">
-                                    <rect width={pWidth} height={pHeight} style={{fill: currentPrimaryColor}}></rect>
-                                </svg>
-                            <svg className="absolute">
-                                <rect width="160" height="175" style={{fill: currentAccentColor1}}></rect>
-                            </svg>
-                                <svg className="absolute top-0 left-0">
-                                    <rect width="120" height="120" style={{fill: currentAccentColor2}}></rect>
-                                </svg>
-                                <svg className="absolute top-0 left-0">
-                                    <rect width="48" height="48" style={{fill: currentAccentColor3}}></rect>
+                                <svg width={pWidth} height={pHeight} viewBox="0 0 400 300">
+                                    <rect width="100%" height="100%" style={{fill: currentPrimaryColor}}></rect>
+                                    <polygon points="0,20 0,60 350,300 385,300" fill={currentAccentColor1} />
+                                    <polygon points="0,60 0,120 200,300 350,300" fill={currentAccentColor2} />
+                                    <polygon points="0,120 0,140 150,300 250,300" fill={currentAccentColor3} />
                                 </svg>
                     </div>
                 </div>
