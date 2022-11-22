@@ -22,14 +22,15 @@ export default function Home() {
                         <span className="bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-500 text-transparent"> color</span>
                     </h2>
                     <p className="py-4 text-slate-600 font-md text-base text-center">
-                        Organic crash pad color visualizer.
+                        Crash pad color visualizer.
                     </p>
                 </div>
                 <div className="pt-8">
                     <ColorSelector />
                 </div>
-                <div >
-                  <p className='text-center text-slate-400 max-w-2xl px-10'>Note: For brainstorming purposes only.  The colors above are directly extracted from the organic climbing website, but may not match exactly what you receive for a variety of reasons.</p>
+                <div className='max-w-xl'>
+                  <p className='pt-10 ext-center text-slate-400 max-w-2xl px-10'>Note: For brainstorming purposes only.  The colors above are directly extracted from the Organic Climbing LLC website, but may not match exactly what you receive for a variety of reasons.</p>
+                  <p className='pt-10 text-center text-slate-400 max-w-2xl px-10'>Have a suggestion?  Contact me on instagram at <a href="https://www.instagram.com/rainesmint/" className='text-sky-600'>@rainesmint</a> or create a <a href="https://github.com/rdemint/organic-color-selector/issues" className='text-sky-600'>Github issue</a></p>
                 </div>
             </div>
           </main>
