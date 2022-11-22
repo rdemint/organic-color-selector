@@ -94,19 +94,26 @@ const accent3 = colors.find((el) => (el.name === "Neon Green"))
             <div className="flex-col justify-center items-center">
                 <div className="organic-visualizer pl-12">
                     <div className="relative">
-                                <svg width='320px' height='240px' viewBox="0 0 320 240">
+                                <svg width='320px' height='240px' viewBox="0 0 320 240" align="center">
                                     
                                     <defs>
                                         <pattern id="texture" width="2" height="2" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-                                            <line x1="1" y1="0" x2="1" y2="2" stroke="#FFFAFA" style={{opacity: .1}}/>
-                                            <line x1="0" y1="1" x2="2" y2="1" stroke="#FFFAFA" style={{opacity: .1}}/>
+                                            <line x1="1" y1="0" x2="1" y2="2" stroke="#FFFAFA" style={{opacity: .3}}/>
+                                            <line x1="0" y1="1" x2="2" y2="1" stroke="#FFFAFA" style={{opacity: .3}}/>
                                         </pattern>
                                     </defs>
-                                    <rect rx="5px" ry="5px" stroke-linejoin="round" width="100%" height="100%" style={{fill: currentPrimaryColor}} fill="url(#texture)"></rect>
+                                    <rect width="100%" height="100%" rx="10px" ry="10px" stroke-linejoin="round" stroke-linecap="round" stroke-width="3px" style={{fill: currentPrimaryColor}}></rect>
                                     <polygon points="0,16 0,48 280,240 308,240" fill={currentAccentColor1} />
                                     <polygon points="0,48 0,96 160,240 280,240" fill={currentAccentColor2} />
                                     <polygon points="0,96 0,112 120,240 200,240" fill={currentAccentColor3} />
                                     <rect width="100%" height="100%" fill="url(#texture)"></rect>
+                                    <rect width="100%" height='100%' opacity=".7" rx="10px" ry="10px" stroke-width="2px" stroke-linejoin="round" stroke-linecap="round" stroke="#5F5F5F" fill="none"></rect>
+                                    <line x1="1" x2="1" y1="5" y2="235" stroke="#5F5F5F" stroke-width="1px" style={{opacity: .7}}/>
+                                    <line x1="319" x2="319" y1="5" y2="235" stroke="#5F5F5F" stroke-width="1px" style={{opacity: .7}}/>
+                                    <line x1="5" x2="315" y1="239" y2="239" stroke="#5F5F5F" stroke-width="1px" style={{opacity: .7}}/>
+                                    <line x1="5" x2="315" y1="1" y2="1" stroke="#5F5F5F" stroke-width="1px" style={{opacity: .7}}/>
+                                    <line x1="160" x2="160" y1="0" y2="340" stroke="#FFFAFA" style={{opacity: .3}}/>
+                                    
                                 </svg>
 
                     </div>
