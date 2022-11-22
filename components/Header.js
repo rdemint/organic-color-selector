@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Header() {
 
 return(
-    <div className="flex items-center justify-between border-b border-accent-100 shadow-inner shadow-slate-400 p-6">
+    <div className="flex items-center justify-between border-b border-accent-100 shadow-inner shadow-slate-200 p-6">
         <Link href="/#">
             <a>
             <img src="/organic_590x.jpg" className='w-36' />

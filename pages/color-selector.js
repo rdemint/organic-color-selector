@@ -112,6 +112,7 @@ const accent3 = colors.find((el) => (el.name === "Neon Green"))
                                     <line x1="319" x2="319" y1="5" y2="235" stroke="#5F5F5F" stroke-width="1px" style={{opacity: .7}}/>
                                     <line x1="5" x2="315" y1="239" y2="239" stroke="#5F5F5F" stroke-width="1px" style={{opacity: .7}}/>
                                     <line x1="5" x2="315" y1="1" y2="1" stroke="#5F5F5F" stroke-width="1px" style={{opacity: .7}}/>
+                                    <polygon points="280,220 300,220 300,228 280,228"  stroke="#333333" stroke-width="1px" fill="yellow" />
                                     <line x1="160" x2="160" y1="0" y2="340" stroke="#FFFAFA" style={{opacity: .3}}/>
                                     
                                 </svg>

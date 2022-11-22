@@ -28,6 +28,9 @@ export default function Home() {
                 <div className="pt-8">
                     <ColorSelector />
                 </div>
+                <div >
+                  <p className='text-center text-slate-400 max-w-2xl px-10'>Note: For brainstorming purposes only.  The colors above are directly extracted from the organic climbing website, but may not match exactly what you receive for a variety of reasons.</p>
+                </div>
             </div>
           </main>
           </div>
