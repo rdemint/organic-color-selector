@@ -95,12 +95,22 @@ const accent3 = colors.find((el) => (el.name === "Neon Green"))
                 <div className="organic-visualizer pl-12">
                     <div className="relative">
                                 <svg width='320px' height='240px' viewBox="0 0 320 240">
-                                    <rect width="100%" height="100%" style={{fill: currentPrimaryColor}}></rect>
+                                    
+                                    <defs>
+                                        <pattern id="texture" width="2" height="2" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+                                            <line x1="1" y1="0" x2="1" y2="2" stroke="#FFFAFA" style={{opacity: .1}}/>
+                                            <line x1="0" y1="1" x2="2" y2="1" stroke="#FFFAFA" style={{opacity: .1}}/>
+                                        </pattern>
+                                    </defs>
+                                    <rect rx="5px" ry="5px" stroke-linejoin="round" width="100%" height="100%" style={{fill: currentPrimaryColor}} fill="url(#texture)"></rect>
                                     <polygon points="0,16 0,48 280,240 308,240" fill={currentAccentColor1} />
                                     <polygon points="0,48 0,96 160,240 280,240" fill={currentAccentColor2} />
-                                    
                                     <polygon points="0,96 0,112 120,240 200,240" fill={currentAccentColor3} />
+                                    <rect width="100%" height="100%" fill="url(#texture)"></rect>
                                 </svg>
+
+                    </div>
+                    <div className="relative">
                     </div>
                 </div>
                 <div>
