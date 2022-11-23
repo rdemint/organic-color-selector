@@ -7,6 +7,8 @@ function MyApp({ Component, pageProps }) {
         <>
         <Head>
             <link rel="icon" href="/color_designer_fav.png" type="image/png"/>
+            <title>Bouldering pad color designer</title>
+
         </Head>
         <AppShell>
             <Component {...pageProps} />
