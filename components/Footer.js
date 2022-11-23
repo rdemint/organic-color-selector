@@ -42,7 +42,7 @@ export default function Footer() {
                         </a>
                     ))}
                 </div>
-                <p className="mt-4 text-center text-base text-gray-400">&copy; 2022 Raines Demint. All rights reserved.</p>
+                <p className="mt-4 text-center text-base text-gray-300">&copy; 2022 Raines Demint</p>
             </div>
         </footer>
 

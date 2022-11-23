@@ -22,12 +22,12 @@ function ColorPicker({label, currentColor, selectColorFunction, colors}) {
                     </div>
                     </Listbox.Button>
                 <Transition as={Fragment} leave="transition ease-in duration-100" leaveFrom="opacity-100" leaveTo="opacity-0">
-                        <Listbox.Options className="absolute h-96 w-96 z-10 bg-white overflow-auto">{colors.map(
+                        <Listbox.Options className="absolute border border-zinc-300 border-r text-zinc-600 h-96 w-64 z-10 bg-white overflow-auto">{colors.map(
                             (color)=> (
                                 <Listbox.Option
                                 key={color.value}
                                 value={color.value}
-                                className="border-l border-zinc-300 border-r text-zinc-600 pl-3 hover:bg-zinc-100 py-2"
+                                className="pl-3 hover:bg-zinc-100 py-2"
                                 >
                                     <div className="flex">
                                         <div style={{backgroundColor: color.value }}className="w-4 h-4 mr-5"></div>
