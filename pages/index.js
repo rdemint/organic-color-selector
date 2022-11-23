@@ -12,7 +12,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Organic Crash pad color picker</title>
-        <meta name="description" content="Organic climbing bouldering pad color picker" />
+        <meta name="description" content="Bouldering pad color designer" />
       </Head>
           <main>
             <div className='flex flex-col items-center justify-between'>
