@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Hero from "@/components/Hero"
 import { useState, useEffect } from 'react'
-import ColorSelector from './color-selector'
+import ColorSelector from '../components/ColorSelector'
 
 
 

@@ -2,17 +2,18 @@ import { Listbox, Transition } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/20/solid"
 import { Fragment } from "react"
 import { useState } from "react"
+import { getDarkVariant, getLightVariant} from '@/lib/hsl-color-variants'
 
 
 function ColorPicker({label, currentColor, selectColorFunction, colors}) {
 
     return (
         <div className="flex justify-center">
-<div className="mb-5">
-        <div className="text-gray-500 px-2">{label}</div>
+        <div className="mb-5">
+            <div className="text-gray-500 px-2">{label}</div>
             <Listbox value={currentColor} onChange={selectColorFunction}>
                 <Listbox.Button className="flex items-center bg-zinc-100 rounded pl-3 w-64">
-                    <span style={{ backgroundColor: currentColor}} className="w-4 h-4 mr-5"></span>
+                    <span style={{ backgroundColor: currentColor.value}} className="w-4 h-4 mr-5"></span>
                     <span>{currentColor.name}</span>
                     <div className="grow flex justify-end">
                         <span className="pl-3">
@@ -80,33 +81,34 @@ export default function ColorSelector(...props) {
         {name: 'White', value: '#FFFAFA', hue:0, saturation:100, lightness:99},
         {name: 'Yellow', value: '#DAD536', hue:58, saturation:69, lightness:53}
     ]
-const primary = colors.find((el)=> (el.name === "Neon Blue"))
-const accent1 = colors.find((el) => (el.name === "Neon Green"))
-const accent2 = colors.find((el) => (el.name === "Neon Yellow"))
-const accent3 = colors.find((el) => (el.name === "Neon Green"))
+let primary = colors.find((el)=> (el.name === "Neon Blue"))
+let accent1 = colors.find((el) => (el.name === "Neon Green"))
+let accent2 = colors.find((el) => (el.name === "Neon Yellow"))
+let accent3 = colors.find((el) => (el.name === "Neon Green"))
 
-   const [currentPrimaryColor, selectPrimaryColor] = useState(primary.value)
-   const [currentAccentColor1, selectAccentColor1] = useState(accent1.value)
-   const [currentAccentColor2, selectAccentColor2] = useState(accent2.value)
-   const [currentAccentColor3, selectAccentColor3] = useState(accent3.value)
-    
+
+const [currentPrimaryColor, selectPrimaryColor] = useState(primary.value)
+const [currentAccent1Color, selectAccent1Color] = useState(accent1.value)
+const [currentAccent2Color, selectAccent2Color] = useState(accent2.value)
+const [currentAccent3Color, selectAccent3Color] = useState(accent3.value)
+
+
    return (
             <div className="flex-col justify-center items-center">
                 <div className="organic-visualizer pl-12">
                     <div className="relative">
                                 <svg width='320px' height='240px' viewBox="0 0 320 240" align="center">
-                                    
-                                    <defs>
+                                    {/* <defs>
                                         <pattern id="texture" width="2" height="2" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-                                            <line x1="1" y1="0" x2="1" y2="2" stroke="#FFFAFA" style={{opacity: .3}}/>
-                                            <line x1="0" y1="1" x2="2" y2="1" stroke="#FFFAFA" style={{opacity: .3}}/>
+                                            <line x1="1" y1="0" x2="1" y2="2" stroke={lightVariant} opacity=".2"/>
+                                            <line x1="0" y1="1" x2="2" y2="1" stroke={darkVariant} opacity=".2"/>
                                         </pattern>
-                                    </defs>
+                                    </defs> */}
                                     <rect width="100%" height="100%" rx="10px" ry="10px" stroke-linejoin="round" stroke-linecap="round" stroke-width="3px" style={{fill: currentPrimaryColor}}></rect>
-                                    <polygon points="0,16 0,48 280,240 308,240" fill={currentAccentColor1} />
-                                    <polygon points="0,48 0,96 160,240 280,240" fill={currentAccentColor2} />
-                                    <polygon points="0,96 0,112 120,240 200,240" fill={currentAccentColor3} />
-                                    <rect width="100%" height="100%" fill="url(#texture)"></rect>
+                                    {/* <rect width="100%" height="100%" fill="url(#texture)"></rect> */}
+                                    <polygon points="0,16 0,48 280,240 308,240" fill={currentAccent1Color} />
+                                    <polygon points="0,48 0,96 160,240 280,240" fill={currentAccent2Color} />
+                                    <polygon points="0,96 0,112 120,240 200,240" fill={currentAccent3Color} />
                                     <rect width="100%" height='100%' opacity=".7" rx="10px" ry="10px" stroke-width="2px" stroke-linejoin="round" stroke-linecap="round" stroke="#5F5F5F" fill="none"></rect>
                                     <line x1="1" x2="1" y1="5" y2="235" stroke="#5F5F5F" stroke-width="1px" style={{opacity: .7}}/>
                                     <line x1="319" x2="319" y1="5" y2="235" stroke="#5F5F5F" stroke-width="1px" style={{opacity: .7}}/>
@@ -114,7 +116,6 @@ const accent3 = colors.find((el) => (el.name === "Neon Green"))
                                     <line x1="5" x2="315" y1="1" y2="1" stroke="#5F5F5F" stroke-width="1px" style={{opacity: .7}}/>
                                     <polygon points="280,220 300,220 300,228 280,228"  stroke="#333333" stroke-width="1px" fill="yellow" />
                                     <line x1="160" x2="160" y1="0" y2="340" stroke="#FFFAFA" style={{opacity: .3}}/>
-                                    
                                 </svg>
 
                     </div>
@@ -122,10 +123,10 @@ const accent3 = colors.find((el) => (el.name === "Neon Green"))
                     </div>
                 </div>
                 <div>
-                    <ColorPicker label="Primary" currentColor={currentPrimaryColor} selectColorFunction={selectPrimaryColor} colors={colors}/>
-                    <ColorPicker label="Accent1" currentColor={currentAccentColor1} selectColorFunction={selectAccentColor1} colors={colors}/>
-                    <ColorPicker label="Accent2" currentColor={currentAccentColor2} selectColorFunction={selectAccentColor2} colors={colors}/>
-                    <ColorPicker label="Accent3" currentColor={currentAccentColor3} selectColorFunction={selectAccentColor3} colors={colors}/>
+                    <ColorPicker label="Primary" currentColor={primary} selectColorFunction={selectPrimaryColor} colors={colors}/>
+                    <ColorPicker label="Accent1" currentColor={accent1} selectColorFunction={selectAccent1Color} colors={colors}/>
+                    <ColorPicker label="Accent2" currentColor={accent2} selectColorFunction={selectAccent2Color} colors={colors}/>
+                    <ColorPicker label="Accent3" currentColor={accent3} selectColorFunction={selectAccent3Color} colors={colors}/>
                 </div>
                 
             </div>
