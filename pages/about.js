@@ -4,7 +4,7 @@ export default function About() {
     return (
                 <div className="flex justify-center max-w-3xl mx-auto bg-white">
                 <div class="prose">
-                    <Image src="/crown_jewel20_2mb.jpg" height="432px" width="768" alt="A man rock climbing a large boulder."/>
+                    <Image src="/crown_jewel20_2mb.jpg" height="432px" width="768" alt="A man rock climbing a large boulder." placeholder="blur" blurDataURL="/crown_jewel20_small_blur.jpg"/>
                     <div className='px-10'>
                         <p className="text-gray-500 text-xs">Raines Demint, Crown Jewel (V10) Lake Tahoe</p>
                         <h2 className='text-slate-800'>Why this site</h2>
