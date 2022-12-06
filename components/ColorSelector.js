@@ -13,8 +13,8 @@ function ColorPicker({label, currentColor, selectColorFunction, colors}) {
             <div className="text-gray-500 px-2">{label}</div>
             <Listbox value={currentColor} onChange={selectColorFunction}>
                 <Listbox.Button className="flex items-center bg-zinc-100 rounded pl-3 w-64">
-                    <span style={{ backgroundColor: currentColor.value}} className="w-4 h-4 mr-5"></span>
-                    <span>{currentColor.name}</span>
+                    <span style={{ backgroundColor: currentColor}} className="w-4 h-4 mr-5"></span>
+                    <span>{(colors.find((el)=>(el.value === currentColor))).name}</span>
                     <div className="grow flex justify-end">
                         <span className="pl-3">
                             <ChevronDownIcon className="h-5 w-5 text-gray-400" aria-hidden="true"/>
@@ -123,10 +123,10 @@ const [currentAccent3Color, selectAccent3Color] = useState(accent3.value)
                     </div>
                 </div>
                 <div>
-                    <ColorPicker label="Primary" currentColor={primary} selectColorFunction={selectPrimaryColor} colors={colors}/>
-                    <ColorPicker label="Accent1" currentColor={accent1} selectColorFunction={selectAccent1Color} colors={colors}/>
-                    <ColorPicker label="Accent2" currentColor={accent2} selectColorFunction={selectAccent2Color} colors={colors}/>
-                    <ColorPicker label="Accent3" currentColor={accent3} selectColorFunction={selectAccent3Color} colors={colors}/>
+                    <ColorPicker label="Primary" currentColor={currentPrimaryColor} selectColorFunction={selectPrimaryColor} colors={colors}/>
+                    <ColorPicker label="Accent1" currentColor={currentAccent1Color} selectColorFunction={selectAccent1Color} colors={colors}/>
+                    <ColorPicker label="Accent2" currentColor={currentAccent2Color} selectColorFunction={selectAccent2Color} colors={colors}/>
+                    <ColorPicker label="Accent3" currentColor={currentAccent3Color} selectColorFunction={selectAccent3Color} colors={colors}/>
                 </div>
                 
             </div>
